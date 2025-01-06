@@ -1,4 +1,16 @@
-const TaskAddInput = ({ inputText, setInputText, taskList, setTaskList }) => {
+interface TaskAddInputProps {
+  inputText: string;
+  setInputText: (text: string) => void;
+  taskList: [];
+  setTaskList: (list: []) => void;
+}
+
+const TaskAddInput = ({
+  inputText,
+  setInputText,
+  taskList,
+  setTaskList,
+}: TaskAddInputProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);

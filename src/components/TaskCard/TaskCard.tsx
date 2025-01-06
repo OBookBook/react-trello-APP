@@ -1,14 +1,23 @@
 import Task from "../Task/Task";
 import TaskAddInput from "../TaskAddInput/TaskAddInput";
-import TaskCardDeleteBtn from "../TaskCardDeleteBtn/TaskCardDeleteBtn";
 import TaskCardTitle from "../TaskCardTitle/TaskCardTitle";
+import TaskCardDeleteBtn from "../TaskCardDeleteBtn/TaskCardDeleteBtn";
+import { useState } from "react";
 
 const TaskCard = () => {
+  const [inputText, setInputText] = useState<string>("");
+  const [taskList, setTaskList] = useState<[]>([]);
+
   return (
     <div className="taskCard">
       <TaskCardTitle />
       <TaskCardDeleteBtn />
-      <TaskAddInput />
+      <TaskAddInput
+        inputText={inputText}
+        setInputText={setInputText}
+        taskList={taskList}
+        setTaskList={setTaskList}
+      />
       <Task />
     </div>
   );

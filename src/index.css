@@ -43,3 +43,16 @@ h1 {
   background-color: rgb(228, 228, 228);
   border-radius: 5px;
 }
+
+.taskCardTitleArea {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.taskCardTitle {
+  width: 80px;
+  font-size: 1.1rem;
+  padding: 4px 6px;
+  border-radius: 3px;
+  outline: none;
+}

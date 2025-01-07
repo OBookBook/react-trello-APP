@@ -21,6 +21,7 @@ const TaskAddInput = ({
         text: inputText,
       },
     ]);
+    setInputText("");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,6 +36,7 @@ const TaskAddInput = ({
           placeholder="add a task"
           className="taskAddInput"
           onChange={handleChange}
+          value={inputText}
         />
       </form>
     </div>

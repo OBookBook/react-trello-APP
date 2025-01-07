@@ -4,7 +4,7 @@ const Task = ({ task }: { task: TaskType }) => {
   return (
     <div className="taskBox">
       <p className="taskText">{task.text}</p>
-      <button>
+      <button className="taskTrashButton">
         <i className="fa-solid fa-trash"></i>
       </button>
     </div>

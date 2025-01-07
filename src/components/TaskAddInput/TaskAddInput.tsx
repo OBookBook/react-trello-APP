@@ -1,8 +1,10 @@
+import { TaskType } from "../../types/types";
+
 interface TaskAddInputProps {
   inputText: string;
   setInputText: (text: string) => void;
-  taskList: [];
-  setTaskList: (list: []) => void;
+  taskList: TaskType[];
+  setTaskList: (list: TaskType[]) => void;
 }
 
 const TaskAddInput = ({
@@ -13,7 +15,12 @@ const TaskAddInput = ({
 }: TaskAddInputProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e);
+    setTaskList([
+      ...taskList,
+      {
+        text: inputText,
+      },
+    ]);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

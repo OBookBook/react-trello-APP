@@ -1,4 +1,4 @@
-import Task from "../Task/Task";
+import Tasks from "../Tasks/Tasks";
 import TaskAddInput from "../TaskAddInput/TaskAddInput";
 import TaskCardTitle from "../TaskCardTitle/TaskCardTitle";
 import TaskCardDeleteBtn from "../TaskCardDeleteBtn/TaskCardDeleteBtn";
@@ -19,7 +19,7 @@ const TaskCard = () => {
         taskList={taskList}
         setTaskList={setTaskList}
       />
-      <Task inputText={inputText} taskList={taskList} />
+      <Tasks inputText={inputText} taskList={taskList} />
     </div>
   );
 };

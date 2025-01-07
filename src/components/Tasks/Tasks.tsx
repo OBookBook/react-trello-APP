@@ -1,6 +1,6 @@
 import { TaskType } from "../../types/types";
 
-const Task = ({
+const Tasks = ({
   inputText,
   taskList,
 }: {
@@ -16,4 +16,4 @@ const Task = ({
   );
 };
 
-export default Task;
+export default Tasks;

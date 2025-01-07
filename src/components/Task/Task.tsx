@@ -10,7 +10,7 @@ const Task = ({
   setTaskList: (tasks: TaskType[]) => void;
 }) => {
   const handleDelete = (id: number) => {
-    setTaskList(taskList.filter((t) => t.id !== id));
+    setTaskList(taskList.filter((task) => task.id !== id));
   };
 
   return (

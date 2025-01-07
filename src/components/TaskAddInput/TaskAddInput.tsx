@@ -15,6 +15,7 @@ const TaskAddInput = ({
 }: TaskAddInputProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (inputText === "") return;
     setTaskList([
       ...taskList,
       {

@@ -1,16 +1,13 @@
 import { TaskType } from "../../types/types";
+import Task from "../Task/Task";
 
-const Tasks = ({
-  inputText,
-  taskList,
-}: {
-  inputText: string;
-  taskList: TaskType[];
-}) => {
+const Tasks = ({ taskList }: { taskList: TaskType[] }) => {
   return (
     <div>
       {taskList.map((task) => (
-        <div>{task.text}</div>
+        <div>
+          <Task task={task} />
+        </div>
       ))}
     </div>
   );

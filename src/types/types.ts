@@ -1,5 +1,5 @@
 export interface TaskData {
-  id: number | string;
+  id: string;
   draggableId: string;
-  text: string;
+  text?: string;
 }

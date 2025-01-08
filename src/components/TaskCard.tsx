@@ -9,7 +9,7 @@ import { Draggable } from "react-beautiful-dnd";
 interface TaskCardProps {
   index: number;
   taskCardLis: TaskData[];
-  setTaskCardList: React.Dispatch<React.SetStateAction<TaskData[]>>;
+  setTaskCardList: (list: TaskData[]) => void;
   taskCard: TaskData;
 }
 

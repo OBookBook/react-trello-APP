@@ -1,11 +1,9 @@
-type TaskCard = {
-  id: string;
-};
+import { TaskData } from "../types/types";
 
 type TaskCardDeleteBtnProps = {
-  taskCardLis: TaskCard[];
-  setTaskCardList: React.Dispatch<React.SetStateAction<TaskCard[]>>;
-  taskCard: TaskCard;
+  taskCardLis: TaskData[];
+  setTaskCardList: (list: TaskData[]) => void;
+  taskCard: TaskData;
 };
 
 const TaskCardDeleteBtn = ({

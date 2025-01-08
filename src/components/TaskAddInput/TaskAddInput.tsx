@@ -1,3 +1,4 @@
+import { v4 as uuid } from "uuid";
 import { TaskType } from "../../types/types";
 
 interface TaskAddInputProps {
@@ -14,13 +15,15 @@ const TaskAddInput = ({
   setTaskList,
 }: TaskAddInputProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const taskID = uuid();
+
     e.preventDefault();
     if (inputText === "") return;
     setTaskList([
       ...taskList,
       {
-        id: taskList.length,
-        draggableId: `task-${taskList.length}`,
+        id: taskID,
+        draggableId: `task-${taskID}`,
         text: inputText,
       },
     ]);

@@ -1,11 +1,11 @@
-import AddTaskBtn from "../AddTaskBtn/AddTaskBtn";
+import AddTaskCardBtn from "../AddTaskCardBtn/AddTaskCardBtn";
 import TaskCard from "../TaskCard/TaskCard";
 
 const TaskCards = () => {
   return (
-    <div>
+    <div className="TaskCardsArea">
       <TaskCard />
-      <AddTaskBtn />
+      <AddTaskCardBtn />
     </div>
   );
 };

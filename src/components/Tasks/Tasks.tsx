@@ -2,7 +2,11 @@ import { TaskType } from "../../types/types";
 import Task from "../Task/Task";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
-const reorder = (taskList, startIndex, endIndex) => {
+const reorder = (
+  taskList: TaskType[],
+  startIndex: number,
+  endIndex: number
+) => {
   const remove = taskList.splice(startIndex, 1);
   taskList.splice(endIndex, 0, remove[0]);
 };

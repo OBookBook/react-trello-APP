@@ -13,7 +13,12 @@ const TaskCards = () => {
   return (
     <div className="TaskCardsArea">
       {taskCardList.map((taskCard) => (
-        <TaskCard key={taskCard.id} />
+        <TaskCard
+          key={taskCard.id}
+          taskCardLis={taskCardList}
+          setTaskCardList={setTaskCardList}
+          taskCard={taskCard}
+        />
       ))}
 
       <AddTaskCardBtn

@@ -5,7 +5,7 @@ import TaskCardDeleteBtn from "../TaskCardDeleteBtn/TaskCardDeleteBtn";
 import { useState } from "react";
 import { TaskType } from "../../types/types";
 
-const TaskCard = () => {
+const TaskCard = ({ taskCardLis, setTaskCardList, taskCard }) => {
   const [inputText, setInputText] = useState<string>("");
   const [taskList, setTaskList] = useState<TaskType[]>([]);
 
@@ -13,9 +13,12 @@ const TaskCard = () => {
     <div className="taskCard">
       <div className="taskCardTitleAndTaskCardDeleteBtnArea">
         <TaskCardTitle />
-        <TaskCardDeleteBtn />
+        <TaskCardDeleteBtn
+          taskCardLis={taskCardLis}
+          setTaskCardList={setTaskCardList}
+          taskCard={taskCard}
+        />
       </div>
-
       <TaskAddInput
         inputText={inputText}
         setInputText={setInputText}

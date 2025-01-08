@@ -12,7 +12,7 @@ const Task = ({
   taskList: TaskType[];
   setTaskList: (tasks: TaskType[]) => void;
 }) => {
-  const handleDelete = (id: number) => {
+  const handleDelete = (id: number | string) => {
     setTaskList(taskList.filter((task) => task.id !== id));
   };
 
@@ -29,7 +29,7 @@ const Task = ({
           <p className="taskText">{task.text}</p>
           <button
             className="taskTrashButton"
-            onClick={() => handleDelete(Number(task.id))}
+            onClick={() => handleDelete(task.id)}
           >
             <i className="fa-solid fa-trash"></i>
           </button>

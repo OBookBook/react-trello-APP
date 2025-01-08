@@ -3,14 +3,14 @@ import TaskAddInput from "./TaskAddInput";
 import TaskCardTitle from "./TaskCardTitle";
 import TaskCardDeleteBtn from "./TaskCardDeleteBtn";
 import { useState } from "react";
-import { TaskType } from "../types/types";
+import { TaskData } from "../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
 interface TaskCardProps {
   index: number;
-  taskCardLis: TaskType[];
-  setTaskCardList: React.Dispatch<React.SetStateAction<TaskType[]>>;
-  taskCard: TaskType;
+  taskCardLis: TaskData[];
+  setTaskCardList: React.Dispatch<React.SetStateAction<TaskData[]>>;
+  taskCard: TaskData;
 }
 
 const TaskCard = ({
@@ -20,7 +20,7 @@ const TaskCard = ({
   taskCard,
 }: TaskCardProps) => {
   const [inputText, setInputText] = useState<string>("");
-  const [taskList, setTaskList] = useState<TaskType[]>([]);
+  const [taskList, setTaskList] = useState<TaskData[]>([]);
 
   return (
     <Draggable index={index} draggableId={taskCard.id}>

@@ -1,11 +1,11 @@
 import { v4 as uuid } from "uuid";
-import { TaskType } from "../types/types";
+import { TaskData } from "../types/types";
 
 interface TaskAddInputProps {
   inputText: string;
   setInputText: (text: string) => void;
-  taskList: TaskType[];
-  setTaskList: (list: TaskType[]) => void;
+  taskList: TaskData[];
+  setTaskList: (list: TaskData[]) => void;
 }
 
 const TaskAddInput = ({

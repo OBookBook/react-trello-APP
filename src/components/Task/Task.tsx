@@ -2,10 +2,12 @@ import { TaskType } from "../../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
 const Task = ({
+  index,
   task,
   taskList,
   setTaskList,
 }: {
+  index: number;
   task: TaskType;
   taskList: TaskType[];
   setTaskList: (tasks: TaskType[]) => void;
@@ -15,7 +17,7 @@ const Task = ({
   };
 
   return (
-    <Draggable index={task.id} draggableId={task.draggableId}>
+    <Draggable index={index} draggableId={task.draggableId}>
       {(provided) => (
         <div
           className="taskBox"

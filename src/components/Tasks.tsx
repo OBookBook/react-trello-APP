@@ -3,13 +3,12 @@ import { reorder } from "../utils/reorder";
 import Task from "./Task";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
-const Tasks = ({
-  taskList,
-  setTaskList,
-}: {
+type TasksProps = {
   taskList: TaskData[];
   setTaskList: (tasks: TaskData[]) => void;
-}) => {
+};
+
+const Tasks = ({ taskList, setTaskList }: TasksProps) => {
   const handleDragEnd = (result: DropResult) => {
     if (result.destination) {
       reorder(taskList, result.source.index, result.destination.index);

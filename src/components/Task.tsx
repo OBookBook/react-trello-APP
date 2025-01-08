@@ -1,4 +1,4 @@
-import { TaskType } from "../../types/types";
+import { TaskData } from "../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
 const Task = ({
@@ -8,9 +8,9 @@ const Task = ({
   setTaskList,
 }: {
   index: number;
-  task: TaskType;
-  taskList: TaskType[];
-  setTaskList: (tasks: TaskType[]) => void;
+  task: TaskData;
+  taskList: TaskData[];
+  setTaskList: (tasks: TaskData[]) => void;
 }) => {
   const handleDelete = (id: number | string) => {
     setTaskList(taskList.filter((task) => task.id !== id));

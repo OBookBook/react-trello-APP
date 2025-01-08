@@ -1,21 +1,8 @@
 import { useState } from "react";
-import AddTaskCardBtn from "../AddTaskCardBtn/AddTaskCardBtn";
-import TaskCard from "../TaskCard/TaskCard";
+import AddTaskCardBtn from "./AddTaskCardBtn";
+import TaskCard from "./TaskCard";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
-
-type TaskCardType = {
-  id: string;
-  draggableId: string;
-};
-
-const reorder = (
-  taskCardList: TaskCardType[],
-  startIndex: number,
-  endIndex: number
-) => {
-  const remove = taskCardList.splice(startIndex, 1);
-  taskCardList.splice(endIndex, 0, remove[0]);
-};
+import { reorder } from "../utils/reorder";
 
 const TaskCards = () => {
   const [taskCardList, setTaskCardList] = useState([

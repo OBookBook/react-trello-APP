@@ -1,5 +1,5 @@
-export interface TaskType {
-  id: number | string;
+export interface TaskData {
+  id: string;
   draggableId: string;
-  text: string;
+  text?: string;
 }

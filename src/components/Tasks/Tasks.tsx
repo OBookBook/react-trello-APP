@@ -1,5 +1,6 @@
 import { TaskType } from "../../types/types";
 import Task from "../Task/Task";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 const Tasks = ({
   taskList,
@@ -10,11 +11,24 @@ const Tasks = ({
 }) => {
   return (
     <div>
-      {taskList.map((task) => (
-        <div>
-          <Task task={task} taskList={taskList} setTaskList={setTaskList} />
-        </div>
-      ))}
+      <DragDropContext>
+        <Droppable droppableId="draggable">
+          {(provided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              {taskList.map((task) => (
+                <div key={task.id}>
+                  <Task
+                    task={task}
+                    taskList={taskList}
+                    setTaskList={setTaskList}
+                  />
+                </div>
+              ))}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
     </div>
   );
 };

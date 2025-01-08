@@ -1,4 +1,5 @@
 import { TaskType } from "../../types/types";
+import { Draggable } from "react-beautiful-dnd";
 
 const Task = ({
   task,
@@ -14,12 +15,25 @@ const Task = ({
   };
 
   return (
-    <div className="taskBox">
-      <p className="taskText">{task.text}</p>
-      <button className="taskTrashButton" onClick={() => handleDelete(task.id)}>
-        <i className="fa-solid fa-trash"></i>
-      </button>
-    </div>
+    <Draggable index={task.id} draggableId={task.draggableId}>
+      {(provided) => (
+        <div
+          className="taskBox"
+          key={task.id}
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          <p className="taskText">{task.text}</p>
+          <button
+            className="taskTrashButton"
+            onClick={() => handleDelete(task.id)}
+          >
+            <i className="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      )}
+    </Draggable>
   );
 };
 

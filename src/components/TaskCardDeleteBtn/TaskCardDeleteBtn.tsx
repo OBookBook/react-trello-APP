@@ -1,5 +1,19 @@
-const TaskCardDeleteBtn = ({ taskCardLis, setTaskCardList, taskCard }) => {
-  const TaskCardDelete = (id) => {
+type TaskCard = {
+  id: string;
+};
+
+type TaskCardDeleteBtnProps = {
+  taskCardLis: TaskCard[];
+  setTaskCardList: React.Dispatch<React.SetStateAction<TaskCard[]>>;
+  taskCard: TaskCard;
+};
+
+const TaskCardDeleteBtn = ({
+  taskCardLis,
+  setTaskCardList,
+  taskCard,
+}: TaskCardDeleteBtnProps) => {
+  const TaskCardDelete = (id: string) => {
     setTaskCardList(taskCardLis.filter((e) => e.id !== id));
   };
   return (

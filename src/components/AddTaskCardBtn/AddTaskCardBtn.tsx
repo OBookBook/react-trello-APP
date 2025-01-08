@@ -1,9 +1,21 @@
 import { v4 as uuid } from "uuid";
 
-const AddTaskCardBtn = ({ taskCardList, setTaskCardList }) => {
+interface TaskCard {
+  id: string;
+  draggableId: string;
+}
+
+interface AddTaskCardBtnProps {
+  taskCardList: TaskCard[];
+  setTaskCardList: React.Dispatch<React.SetStateAction<TaskCard[]>>;
+}
+
+const AddTaskCardBtn = ({
+  taskCardList,
+  setTaskCardList,
+}: AddTaskCardBtnProps) => {
   const addTaskCard = () => {
     const taskCardId = uuid();
-
     setTaskCardList([
       ...taskCardList,
       {

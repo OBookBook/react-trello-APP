@@ -11,8 +11,11 @@ const TaskCard = () => {
 
   return (
     <div className="taskCard">
-      <TaskCardTitle />
-      <TaskCardDeleteBtn />
+      <div className="taskCardTitleAndTaskCardDeleteBtnArea">
+        <TaskCardTitle />
+        <TaskCardDeleteBtn />
+      </div>
+
       <TaskAddInput
         inputText={inputText}
         setInputText={setInputText}

@@ -115,3 +115,15 @@ h1 {
   transform: translateY(0);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
+.taskCardTitleAndTaskCardDeleteBtnArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskCardDeleteBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+}

@@ -6,7 +6,19 @@ import { useState } from "react";
 import { TaskType } from "../../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
-const TaskCard = ({ index, taskCardLis, setTaskCardList, taskCard }) => {
+interface TaskCardProps {
+  index: number;
+  taskCardLis: TaskType[];
+  setTaskCardList: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  taskCard: TaskType;
+}
+
+const TaskCard = ({
+  index,
+  taskCardLis,
+  setTaskCardList,
+  taskCard,
+}: TaskCardProps) => {
   const [inputText, setInputText] = useState<string>("");
   const [taskList, setTaskList] = useState<TaskType[]>([]);
 

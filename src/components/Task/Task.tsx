@@ -29,7 +29,7 @@ const Task = ({
           <p className="taskText">{task.text}</p>
           <button
             className="taskTrashButton"
-            onClick={() => handleDelete(task.id)}
+            onClick={() => handleDelete(Number(task.id))}
           >
             <i className="fa-solid fa-trash"></i>
           </button>

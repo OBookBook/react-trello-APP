@@ -30,8 +30,9 @@ h1 {
 }
 
 .app {
-  background: url(./assets/bg.jpg);
-  background-repeat: no-repeat;
+  background-color: rgb(253, 245, 245);
+  /* background: url(./assets/bg.jpg); */
+  /* background-repeat: no-repeat; */
   height: 100vh;
   background-size: cover;
 }
@@ -39,8 +40,8 @@ h1 {
 .taskCard {
   width: 250px;
   padding: 10px 25px;
-  margin: 10px 1%;
-  background-color: rgb(228, 228, 228);
+  margin: 20px 1%;
+  background-color: rgb(187, 207, 151);
   border-radius: 5px;
 }
 
@@ -100,6 +101,7 @@ h1 {
   border-radius: 50%;
   font-size: 20px;
   color: #333;
+  background-color: rgb(187, 207, 151);
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;

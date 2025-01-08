@@ -2,14 +2,10 @@ import { useState } from "react";
 import AddTaskCardBtn from "./AddTaskCardBtn";
 import TaskCard from "./TaskCard";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
-
-type TaskCardType = {
-  id: string;
-  draggableId: string;
-};
+import { TaskData } from "../types/types";
 
 const reorder = (
-  taskCardList: TaskCardType[],
+  taskCardList: TaskData[],
   startIndex: number,
   endIndex: number
 ) => {

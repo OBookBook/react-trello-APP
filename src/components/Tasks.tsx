@@ -1,9 +1,9 @@
-import { TaskType } from "../types/types";
+import { TaskData } from "../types/types";
 import Task from "./Task";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
 const reorder = (
-  taskList: TaskType[],
+  taskList: TaskData[],
   startIndex: number,
   endIndex: number
 ) => {
@@ -15,8 +15,8 @@ const Tasks = ({
   taskList,
   setTaskList,
 }: {
-  taskList: TaskType[];
-  setTaskList: (tasks: TaskType[]) => void;
+  taskList: TaskData[];
+  setTaskList: (tasks: TaskData[]) => void;
 }) => {
   const handleDragEnd = (result: DropResult) => {
     if (result.destination) {

@@ -1,4 +1,4 @@
-import { TaskType } from "../../types/types";
+import { TaskType } from "../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
 const Task = ({

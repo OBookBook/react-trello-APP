@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { TaskType } from "../../types/types";
+import { TaskType } from "../types/types";
 
 interface TaskAddInputProps {
   inputText: string;

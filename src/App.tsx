@@ -1,5 +1,5 @@
-import Header from "./components/Header/Header";
-import TaskCards from "./components/TaskCards/TaskCards";
+import Header from "./components/Header";
+import TaskCards from "./components/TaskCards";
 
 function App() {
   return (

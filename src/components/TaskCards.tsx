@@ -1,6 +1,6 @@
 import { useState } from "react";
-import AddTaskCardBtn from "../AddTaskCardBtn/AddTaskCardBtn";
-import TaskCard from "../TaskCard/TaskCard";
+import AddTaskCardBtn from "./AddTaskCardBtn";
+import TaskCard from "./TaskCard";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
 type TaskCardType = {

@@ -1,9 +1,9 @@
-import Tasks from "../Tasks/Tasks";
-import TaskAddInput from "../TaskAddInput/TaskAddInput";
-import TaskCardTitle from "../TaskCardTitle/TaskCardTitle";
-import TaskCardDeleteBtn from "../TaskCardDeleteBtn/TaskCardDeleteBtn";
+import Tasks from "./Tasks";
+import TaskAddInput from "./TaskAddInput";
+import TaskCardTitle from "./TaskCardTitle";
+import TaskCardDeleteBtn from "./TaskCardDeleteBtn";
 import { useState } from "react";
-import { TaskType } from "../../types/types";
+import { TaskType } from "../types/types";
 import { Draggable } from "react-beautiful-dnd";
 
 interface TaskCardProps {

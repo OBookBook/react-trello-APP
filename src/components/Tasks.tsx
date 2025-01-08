@@ -1,5 +1,5 @@
-import { TaskType } from "../../types/types";
-import Task from "../Task/Task";
+import { TaskType } from "../types/types";
+import Task from "./Task";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 
 const reorder = (
